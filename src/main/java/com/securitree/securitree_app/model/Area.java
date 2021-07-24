@@ -5,7 +5,15 @@
  */
 package com.securitree.securitree_app.model;
 
+import java.io.Serializable;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import lombok.Data;
 
 /**
@@ -16,11 +24,17 @@ import lombok.Data;
  * "parent_area_id": null, "child_area_ids
  */
 @Data
-public class Area {
+@Entity
+@Table(name = "areas")
+public class Area implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private String name;
     private String parent_area_id;
     private List<String> child_area_ids;
+    @OneToMany
+    private List<Door> doors;
 
 }
