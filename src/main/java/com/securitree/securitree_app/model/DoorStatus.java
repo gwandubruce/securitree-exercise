@@ -7,7 +7,7 @@ package com.securitree.securitree_app.model;
 
 /**
  *
- * @author 
+ * @author Bruce Gwandu
  */
 public enum DoorStatus {
 

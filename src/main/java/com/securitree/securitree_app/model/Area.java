@@ -6,11 +6,13 @@
 package com.securitree.securitree_app.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -18,10 +20,9 @@ import lombok.Data;
 
 /**
  *
- * @author telecel
+ * @author Bruce Gwandu
  *
- * "id": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C", "name": "Wonka Factory",
- * "parent_area_id": null, "child_area_ids
+ *
  */
 @Data
 @Entity
@@ -36,5 +37,10 @@ public class Area implements Serializable {
     private List<String> child_area_ids;
     @OneToMany
     private List<Door> doors;
+    @ManyToOne
+    @JoinColumn(name = "FK_PARENT_AREA")
+    public Area parentArea;
+    @OneToMany(mappedBy = "parentArea", orphanRemoval = true)
+    public List<Area> childAreas = new ArrayList<Area>();
 
 }
