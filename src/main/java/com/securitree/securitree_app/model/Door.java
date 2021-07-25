@@ -5,21 +5,39 @@
  */
 package com.securitree.securitree_app.model;
 
+import java.io.Serializable;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import lombok.Data;
 
 /**
  *
- * @author telecel
+ * @author Bruce Gwandu
  *
- 
+ *
  */
-
 @Data
-public class Door {
+@Entity
+public class Door implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int txnid;
     private String id;
     private String name;
     private String parent_area;
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private DoorStatus status;
+    @ManyToOne
+    private Area area;
+    @OneToMany
+    private List<AccessRule> accessRules;
 
 }

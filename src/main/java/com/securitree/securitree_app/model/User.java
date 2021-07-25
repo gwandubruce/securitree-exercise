@@ -5,30 +5,28 @@
  */
 package com.securitree.securitree_app.model;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import lombok.Data;
 
 /**
  *
- * @author telecel
- * 
- * 
- * 
- *   {
-            {
-            "username": "knopel",
-            "first_name": "Leslie",
-            "surname": "Knope",
-            "password": "jjsdiner"
-        },"
-        },
+ * @author Bruce Gwandu
+ *
  */
-
 @Data
-public class User {
-    
+@Entity
+public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int userId;
     private String username;
     private String first_name;
     private String surname;
     private String password;
-    
+
 }
