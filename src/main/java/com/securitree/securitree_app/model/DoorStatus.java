@@ -7,10 +7,10 @@ package com.securitree.securitree_app.model;
 
 /**
  *
- * @author telecel
+ * @author 
  */
 public enum DoorStatus {
 
-    UNLOCKED, LOCKED ;
+    OPEN, CLOSED ;
 
 }
