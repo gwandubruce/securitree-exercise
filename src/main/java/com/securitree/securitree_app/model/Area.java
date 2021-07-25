@@ -8,7 +8,11 @@ package com.securitree.securitree_app.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,9 +35,13 @@ public class Area implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private int txnid;
     private String id;
     private String name;
     private String parent_area_id;
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "child_list", joinColumns = @JoinColumn(name = "txnid"))
+    @Column(name = "child_area_ids")
     private List<String> child_area_ids;
     @OneToMany
     private List<Door> doors;

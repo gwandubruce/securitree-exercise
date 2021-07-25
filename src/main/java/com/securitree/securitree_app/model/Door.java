@@ -29,6 +29,7 @@ public class Door implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private int txnid;
     private String id;
     private String name;
     private String parent_area;

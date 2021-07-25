@@ -11,6 +11,6 @@ package com.securitree.securitree_app.model;
  */
 public enum DoorStatus {
 
-    OPEN, CLOSED ;
+    OPEN, CLOSED;
 
 }
