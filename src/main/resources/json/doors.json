@@ -1,0 +1,206 @@
+ [
+            {
+                "id": "126A73D3-2148-4DA9-9332-867571884AA1",
+                "name": "Main Gate",
+                "parentArea": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C",
+                "status": "open"
+            },
+            {
+                "id": "094F5C91-0E13-4712-8382-1B4B829C4111",
+                "name": "Factory Front Door",
+                "parentArea": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C",
+                "status": "open"
+            },
+            {
+                "id": "4415D5B1-AA7D-4732-BEA6-99B610B2FDBF",
+                "name": "Factory Back Door",
+                "parentArea": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C",
+                "status": "closed"
+            },
+            {
+                "id": "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                "name": "Secret Entrance Tunnel Grate",
+                "parentArea": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C",
+                "status": "open"
+            },
+            {
+                "id": "EDFEAF67-E20B-40CD-B8AD-9F267B1AFBB3",
+                "name": "Chocolate Room Entrance",
+                "parentArea": "CBB8569D-C331-4629-A1F7-236BFA1A2822",
+                "status": "open"
+            },
+            {
+                "id": "FD9FFD2F-B8F4-4670-ACE3-82A1D6E09441",
+                "name": "Chocolate River Entrance",
+                "parentArea": "64F25F3B-0F65-45EE-92A7-2B53E58B5CDD",
+                "status": "closed"
+            },
+            {
+                "id": "FD86E996-9087-4B0B-A61D-CC821B7CCC9F",
+                "name": "Pipeline Maintenance Hatch #1",
+                "parentArea": "7EE29BBE-259C-402B-B870-7C32FC845674",
+                "status": "open"
+            },
+            {
+                "id": "98ED4AAB-8D39-430A-82B6-E22CF8ED4E24",
+                "name": "Pipeline Draining Hatch #1",
+                "parentArea": "7EE29BBE-259C-402B-B870-7C32FC845674",
+                "status": "closed"
+            },
+            {
+                "id": "01AF3DE8-FC26-4643-99CA-BD4F1D8FBA16",
+                "name": "Pipeline Drainage Hatch #42",
+                "parentArea": "24D54F49-1D8C-417A-9B43-AC12F43DE294",
+                "status": "open"
+            },
+            {
+                "id": "322E6284-9D47-4A9E-BB9C-51E4BD4CFAD3",
+                "name": "Oompa Loompa Feeding Tube",
+                "parentArea": "24D54F49-1D8C-417A-9B43-AC12F43DE294",
+                "status": "open"
+            },
+            {
+                "id": "01BF3FCD-6626-41B9-B09E-1BAE0DCCA88A",
+                "name": "Meadow Fields Hallway",
+                "parentArea": "F29B9474-CABC-46E3-8B75-66281ABFBA92",
+                "status": "open"
+            },
+            {
+                "id": "7FCE32EE-EE2D-46AA-8285-317EBA5D5F9C",
+                "name": "Rickety Wooden Door",
+                "parentArea": "EB3741EF-929D-430C-B637-EA5425ABB0E7",
+                "status": "open"
+            },
+            {
+                "id": "4D2B151E-C010-46A9-AAF3-E203E3779FC9",
+                "name": "Fear Tunnel Dock Entrance",
+                "parentArea": "A44424B0-3253-4EE7-9060-7C977F4840C8",
+                "status": "closed"
+            },
+            {
+                "id": "AB296B73-8C37-4549-AD03-26D35541F37E",
+                "name": "Entrance To The Absurd",
+                "parentArea": "A44424B0-3253-4EE7-9060-7C977F4840C8",
+                "status": "open"
+            },
+            {
+                "id": "78A2F6A7-A20B-4E99-BCB8-439C28D92825",
+                "name": "Juicing Room Main Entrance",
+                "parentArea": "A31CDB07-17EE-4F50-B635-247BB9163EDF",
+                "status": "closed"
+            },
+            {
+                "id": "BF8F4D8D-26AC-4650-85E0-3CD672B93EEB",
+                "name": "Juicer Entrance",
+                "parentArea": "A31CDB07-17EE-4F50-B635-247BB9163EDF",
+                "status": "closed"
+            },
+            {
+                "id": "25B59AFC-3E85-4793-815D-1E2B2ECD0253",
+                "name": "R&D Entrance",
+                "parentArea": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "status": "open"
+            },
+            {
+                "id": "413CC597-47A5-4624-B409-9E1FFC85D325",
+                "name": "Portal To Forbidden Knowledge",
+                "parentArea": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "status": "open"
+            },
+            {
+                "id": "90B28026-FDBF-4F52-AFE8-A5774B10DADD",
+                "name": "Wallpaper Room Main Entrance",
+                "parentArea": "57569BE4-FF4A-4C56-A274-A24CBB7E4672",
+                "status": "open"
+            },
+            {
+                "id": "85F4760A-995C-49CA-B835-6FB8985D9028",
+                "name": "Wallpaper Degreaser Entrance",
+                "parentArea": "57569BE4-FF4A-4C56-A274-A24CBB7E4672",
+                "status": "open"
+            },
+            {
+                "id": "ACBF07D7-83B7-4C2F-88E1-7B00AA44F780",
+                "name": "Fizzy Room Entrance",
+                "parentArea": "F33941A1-7623-4192-80E0-7B1511C17883",
+                "status": "open"
+            },
+            {
+                "id": "4F9F3DF2-5F07-4086-BE39-94F20AD7D8C8",
+                "name": "Exhaust Fan",
+                "parentArea": "F33941A1-7623-4192-80E0-7B1511C17883",
+                "status": "closed"
+            },
+            {
+                "id": "3C183F78-AF02-437E-B6B7-41D41A74A41D",
+                "name": "Degassing Chamber Blast Door",
+                "parentArea": "F33941A1-7623-4192-80E0-7B1511C17883",
+                "status": "closed"
+            },
+            {
+                "id": "CC46EA77-4326-4F41-BD5A-CD8510D208BF",
+                "name": "Nut Room Entrance",
+                "parentArea": "93179369-BD5D-42CE-A266-8F164D9C0700",
+                "status": "closed"
+            },
+            {
+                "id": "E4A3E9CE-F586-4892-810A-40BE8F352589",
+                "name": "Squirrel Entrance",
+                "parentArea": "93179369-BD5D-42CE-A266-8F164D9C0700",
+                "status": "closed"
+            },
+            {
+                "id": "80920DCD-B25D-4ADF-A2F8-834D92009EF6",
+                "name": "Garbage Chute Hatch",
+                "parentArea": "51E7ABC4-7F01-42EF-A6F2-E8E3379FBB26",
+                "status": "open"
+            },
+            {
+                "id": "E272979A-D541-4B7D-AB12-46FC9598186A",
+                "name": "Incinerator Chute Entrance",
+                "parentArea": "C9191B2C-08D1-48F0-8F19-FE4FA92A852A",
+                "status": "open"
+            },
+            {
+                "id": "F1222FCF-6599-44D4-913F-6A4F6773461D",
+                "name": "Furnace Door",
+                "parentArea": "C9191B2C-08D1-48F0-8F19-FE4FA92A852A",
+                "status": "closed"
+            },
+            {
+                "id": "B3831A80-1616-4E30-992F-8E738D549EF6",
+                "name": "Studio Entrance",
+                "parentArea": "A7DF2E8E-71DD-4C32-AE92-EE33E2D4DF18",
+                "status": "closed"
+            },
+            {
+                "id": "9EB36867-9AAD-4A3B-B436-0476CDC10624",
+                "name": "Broadcasting Camera #1",
+                "parentArea": "A7DF2E8E-71DD-4C32-AE92-EE33E2D4DF18",
+                "status": "open"
+            },
+            {
+                "id": "5B27A600-09E5-4F28-ACB9-A839215CDBD3",
+                "name": "Tunnel Entrance #1",
+                "parentArea": "BD506F8D-F4CD-4E19-ABCA-573808390FB6",
+                "status": "closed"
+            },
+            {
+                "id": "9DAF4306-CF30-469B-9C1A-8225F5504ED8",
+                "name": "Penuche Summit Entrance",
+                "parentArea": "BD506F8D-F4CD-4E19-ABCA-573808390FB6",
+                "status": "open"
+            },
+            {
+                "id": "2D8D7EA3-0AE4-4127-987F-C7A69726BDBF",
+                "name": "Candy Mine Entrance",
+                "parentArea": "36BFBBB6-15ED-4222-9528-9830434A59FC",
+                "status": "closed"
+            },
+            {
+                "id": "D58A97C1-C6D0-410F-BB7B-36BFC47F1BB1",
+                "name": "Crystalizer Entrance Door #7",
+                "parentArea": "36BFBBB6-15ED-4222-9528-9830434A59FC",
+                "status": "open"
+            }
+        ]

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <!--        <link rel="stylesheet" th:href="@{/styles.css}" />-->
+    </head>
+    <body>
+        <!--        <div th:if="${error}">
+                    Unable to Log in. Please check your credentials and retry!
+                </div>-->
+        <form name="loginForm" method="POST" th:action="@{/login}" >
+
+            <div th:if="${error}">
+                Unable to Log in. Please check your credentials and retry!
+            </div>
+            <fieldset>
+                <legend> Please Enter Your Login Credentials To Begin</legend>
+
+
+
+
+                <label for = "username" > Username </label>
+                <input type="text" id="username" name="username"/>
+                <br/>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"/>
+                <br/>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn"> Log in</button>
+
+                </div>
+            </fieldset>
+        </form>
+
+    </body>
+</html>

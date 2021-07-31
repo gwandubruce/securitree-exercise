@@ -15,9 +15,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.Table;
 import lombok.Data;
-import net.bytebuddy.dynamic.loading.ClassReloadingStrategy;
 
 /**
  *
@@ -26,16 +25,18 @@ import net.bytebuddy.dynamic.loading.ClassReloadingStrategy;
  */
 @Data
 @Entity
+@Table(name = "accessrules")
 public class AccessRule implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int txnid;
+    @Column(name = "rule_id")
     private String id;
     private String name;
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "door_list", joinColumns = @JoinColumn(name = "txnid"))
-    @Column(name = "doors")
+    @ElementCollection(fetch = FetchType.LAZY)
+    @CollectionTable(name = "rule_door_map")
     private List<String> doors;
+    
 
 }

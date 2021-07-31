@@ -6,10 +6,12 @@
 package com.securitree.securitree_app.model;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import lombok.Data;
 
 /**
@@ -19,14 +21,16 @@ import lombok.Data;
  */
 @Data
 @Entity
+@Table(name="users")
 public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private int Id;
     private String username;
+    private String password;
+    @Column(name = "firstname")
     private String first_name;
     private String surname;
-    private String password;
 
 }

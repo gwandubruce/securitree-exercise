@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+    <head >
+        <title> SSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            ul, #myUL {
+                list-style-type: none;
+
+            }
+            #myUL {
+                margin: 0;
+                padding: 0;
+            }
+            .caret {
+                cursor: pointer;
+                -webkit-user-select: none; 
+                -moz-user-select: none; 
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .caret::before {
+                content: "\25B6";
+                color: blue;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            .caret-down::before {
+                -ms-transform: rotate(90deg); 
+                -webkit-transform: rotate(90deg); 
+                transform: rotate(90deg);  
+            }
+
+            .nested {
+                display: none;
+            }
+
+            .active {
+                display: block;
+            }
+            li{
+                display: block;
+            }
+            .magenta{
+
+                color: darkmagenta;
+            }
+            .green{
+
+                color: darkgreen
+            }
+            .crimson{
+
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>SecuriTree View</h2>
+
+        <p>Click On The Arrow(s) To View Door Status and Entrance Rules.</p>
+        <ul id="myUL">
+            <th:block th:each="area:${areas}">
+                <li> <span class="caret" th:text="${area.name}"> Parent Area</span>
+                    <ul class="nested">
+                        <th:block th:each="door:${doors.findByParentArea(area.id)}">
+                            <li> 
+                                <span class="magenta" th:text="'[Door] '">No Door Information</span ><span th:text="${door.name}"></span><span class="green" th:text="'-('+${door.status}+')'" ></span>
+                            </li>
+                            <li> <th:block th:each="rule:${rules.findByDoorId(door.id)}">
+                                    <span  class="crimson" th:text="'[Rule]'">No Rule Information</span><span th:text="'- '+${rule.name}+' '"></span>
+                                </th:block>
+                            </li>
+                        </th:block>
+                        <th:block th:each="child:${area.getChild_area_ids()}">
+                            <li><span class="caret magenta" th:text="'[Child Area] '"> Child Area </span><span th:text="${areaRepo.findById(child).name}"></span>
+                                <ul class="nested">
+                                    <th:block th:each="drChild:${doors.findByParentArea(areaRepo.findById(child).id)}">
+                                        <li>
+                                            <span class="magenta" th:text="'[Door] '">No Child Area Information</span><span th:text="${drChild.name}"></span><span class="green" th:text="'( '+${drChild.status}+')'"></span>
+                                        </li>
+                                        <li> <th:block th:each="ruleChild:${rules.findByDoorId(drChild.id)}">
+                                                <span class="crimson" th:text="'[Rule]'">No Access Rules Information</span><span th:text="'- '+${ruleChild.name}+' ,'"></span>
+
+                                            </th:block>
+                                        </li>
+                                    </th:block>
+                                </ul>
+                            </li> 
+                        </th:block>
+                    </ul>
+                </li>
+            </th:block>
+        </ul>
+        <script>
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+            for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+            });
+            }
+        </script>
+    </body>
+</html>

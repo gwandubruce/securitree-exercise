@@ -6,15 +6,11 @@
 package com.securitree.securitree_app.model;
 
 import java.io.Serializable;
-import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import lombok.Data;
 
 /**
@@ -28,16 +24,14 @@ import lombok.Data;
 public class Door implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int txnid;
+    @Column(name = "door_id")
     private String id;
     private String name;
-    private String parent_area;
-    @Enumerated(EnumType.STRING)
-    private DoorStatus status;
-    @ManyToOne
-    private Area area;
-    @OneToMany
-    private List<AccessRule> accessRules;
+    @Column(name = "area_id")
+    private String parentArea;
+    private String status;
+
 
 }
