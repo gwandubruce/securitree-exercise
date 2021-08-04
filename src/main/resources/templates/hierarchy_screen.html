@@ -82,7 +82,9 @@
                 </form>
             </div>
         </nav>
-        <h2 class="lead " align="center" style="margin-top: 5%" ><b  >SecuriTree View</b></h2>
+        <h2 class="lead " align="center" style="margin-top: 2%" ><b  >...<svg xmlns="http://www.w3.org/2000/svg" style="color: greenyellow" width="40" height="40" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+                    <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
+                </svg>...</b></h2>
         <p class="lead" align="center"> Click On The Arrow(s) To View Door Status and Entrance Rules For Areas and Their Sub-areas.</p>
         <div style="align-items: center; border-style: solid;border-color: lightcoral;padding-top:2%;margin:1% 21% 55% 21%; " align="center" >
             <ul id="myUL" >
@@ -91,7 +93,7 @@
                         <ul class="nested">
                             <th:block th:each="door:${doors.findByParentArea(area.id)}">
                                 <li> 
-                                    <em><span class="magenta" th:text="'[Door] '">No Door Information</span ></em><span th:text="${door.name}"></span><em><span class="green" th:text="'-('+${door.status}+')'" ></span></em>
+                                    <em><button class="magenta" th:text="'DOOR '+${door.id} ">No Door Information</button ></em><span th:text="${door.name}"></span><em><span class="green" th:text="'-('+${door.status}+')'" ></span></em>
                                 </li>
                                 <li> <th:block th:each="rule:${rules.findByDoorId(door.id)}">
                                         <em> <span  class="text-danger" th:text="'[Rule]'">No Rule Information</span></em><span th:text="'- '+${rule.name}+' '"></span>
@@ -103,7 +105,7 @@
                                     <ul class="nested">
                                         <th:block th:each="drChild:${doors.findByParentArea(areaRepo.findById(child).id)}">
                                             <li>
-                                                <em><span class="magenta" th:text="'[Door] '">No Child Area Information</span></em> <em><span th:text="${drChild.name}"></span></em><em><span class="green" th:text="'( '+${drChild.status}+')'"></span></em>
+                                                <em><button class="magenta" th:text="'DOOR '+${drChild.id}">No Child Area Information</button></em> <em><span th:text="${drChild.name}"></span></em><em><span class="green" th:text="'( '+${drChild.status}+')'"></span></em>
                                             </li>
                                             <li> <th:block th:each="ruleChild:${rules.findByDoorId(drChild.id)}">
                                                     <em> <span class="text-danger" th:text="'[Rule]'">No Access Rules Information</span></em><span th:text="'- '+${ruleChild.name}+' ,'"></span>
