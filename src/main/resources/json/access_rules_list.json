@@ -1,0 +1,178 @@
+[
+            {
+                "id": "A81EAF69-E737-4DCB-925A-B4F27BD3C119",
+                "name": "sar-wonka",
+                "doors": [
+                    "126A73D3-2148-4DA9-9332-867571884AA1",
+                    "094F5C91-0E13-4712-8382-1B4B829C4111",
+                    "4415D5B1-AA7D-4732-BEA6-99B610B2FDBF",
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "EDFEAF67-E20B-40CD-B8AD-9F267B1AFBB3",
+                    "FD9FFD2F-B8F4-4670-ACE3-82A1D6E09441",
+                    "FD86E996-9087-4B0B-A61D-CC821B7CCC9F",
+                    "98ED4AAB-8D39-430A-82B6-E22CF8ED4E24",
+                    "01AF3DE8-FC26-4643-99CA-BD4F1D8FBA16",
+                    "322E6284-9D47-4A9E-BB9C-51E4BD4CFAD3",
+                    "01BF3FCD-6626-41B9-B09E-1BAE0DCCA88A",
+                    "7FCE32EE-EE2D-46AA-8285-317EBA5D5F9C",
+                    "4D2B151E-C010-46A9-AAF3-E203E3779FC9",
+                    "AB296B73-8C37-4549-AD03-26D35541F37E",
+                    "78A2F6A7-A20B-4E99-BCB8-439C28D92825",
+                    "BF8F4D8D-26AC-4650-85E0-3CD672B93EEB",
+                    "25B59AFC-3E85-4793-815D-1E2B2ECD0253",
+                    "413CC597-47A5-4624-B409-9E1FFC85D325",
+                    "90B28026-FDBF-4F52-AFE8-A5774B10DADD",
+                    "85F4760A-995C-49CA-B835-6FB8985D9028",
+                    "ACBF07D7-83B7-4C2F-88E1-7B00AA44F780",
+                    "4F9F3DF2-5F07-4086-BE39-94F20AD7D8C8",
+                    "3C183F78-AF02-437E-B6B7-41D41A74A41D",
+                    "CC46EA77-4326-4F41-BD5A-CD8510D208BF",
+                    "E4A3E9CE-F586-4892-810A-40BE8F352589",
+                    "80920DCD-B25D-4ADF-A2F8-834D92009EF6",
+                    "E272979A-D541-4B7D-AB12-46FC9598186A",
+                    "F1222FCF-6599-44D4-913F-6A4F6773461D",
+                    "B3831A80-1616-4E30-992F-8E738D549EF6",
+                    "9EB36867-9AAD-4A3B-B436-0476CDC10624",
+                    "5B27A600-09E5-4F28-ACB9-A839215CDBD3",
+                    "9DAF4306-CF30-469B-9C1A-8225F5504ED8",
+                    "2D8D7EA3-0AE4-4127-987F-C7A69726BDBF",
+                    "D58A97C1-C6D0-410F-BB7B-36BFC47F1BB1"
+                ]
+            },
+            {
+                "id": "186DD659-EC26-4AA2-8389-706E58284171",
+                "name": "sar-admin-oompas",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "EDFEAF67-E20B-40CD-B8AD-9F267B1AFBB3",
+                    "FD9FFD2F-B8F4-4670-ACE3-82A1D6E09441",
+                    "FD86E996-9087-4B0B-A61D-CC821B7CCC9F",
+                    "98ED4AAB-8D39-430A-82B6-E22CF8ED4E24",
+                    "01AF3DE8-FC26-4643-99CA-BD4F1D8FBA16",
+                    "322E6284-9D47-4A9E-BB9C-51E4BD4CFAD3",
+                    "01BF3FCD-6626-41B9-B09E-1BAE0DCCA88A",
+                    "7FCE32EE-EE2D-46AA-8285-317EBA5D5F9C",
+                    "4D2B151E-C010-46A9-AAF3-E203E3779FC9",
+                    "AB296B73-8C37-4549-AD03-26D35541F37E",
+                    "78A2F6A7-A20B-4E99-BCB8-439C28D92825",
+                    "BF8F4D8D-26AC-4650-85E0-3CD672B93EEB",
+                    "25B59AFC-3E85-4793-815D-1E2B2ECD0253"
+                ]
+            },
+            {
+                "id": "1EA0370A-BD1F-45B6-BD83-B6029C162E75",
+                "name": "sar-oarsmen-oompas",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "EDFEAF67-E20B-40CD-B8AD-9F267B1AFBB3",
+                    "FD9FFD2F-B8F4-4670-ACE3-82A1D6E09441",
+                    "FD86E996-9087-4B0B-A61D-CC821B7CCC9F",
+                    "98ED4AAB-8D39-430A-82B6-E22CF8ED4E24",
+                    "01AF3DE8-FC26-4643-99CA-BD4F1D8FBA16",
+                    "322E6284-9D47-4A9E-BB9C-51E4BD4CFAD3",
+                    "01BF3FCD-6626-41B9-B09E-1BAE0DCCA88A",
+                    "7FCE32EE-EE2D-46AA-8285-317EBA5D5F9C",
+                    "4D2B151E-C010-46A9-AAF3-E203E3779FC9"
+                ]
+            },
+            {
+                "id": "98C76BFA-AB50-4054-BCE1-F44B73C4A8BB",
+                "name": "sar-broadcasting-oompas",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "25B59AFC-3E85-4793-815D-1E2B2ECD0253",
+                    "B3831A80-1616-4E30-992F-8E738D549EF6",
+                    "9EB36867-9AAD-4A3B-B436-0476CDC10624"
+                ]
+            },
+            {
+                "id": "072062CF-2299-4600-9FA9-D22444A89951",
+                "name": "sar-test-oompas-dclass",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "25B59AFC-3E85-4793-815D-1E2B2ECD0253",
+                    "413CC597-47A5-4624-B409-9E1FFC85D325",
+                    "90B28026-FDBF-4F52-AFE8-A5774B10DADD",
+                    "ACBF07D7-83B7-4C2F-88E1-7B00AA44F780",
+                    "3C183F78-AF02-437E-B6B7-41D41A74A41D",
+                    "CC46EA77-4326-4F41-BD5A-CD8510D208BF",
+                    "B3831A80-1616-4E30-992F-8E738D549EF6",
+                    "9EB36867-9AAD-4A3B-B436-0476CDC10624",
+                    "5B27A600-09E5-4F28-ACB9-A839215CDBD3",
+                    "9DAF4306-CF30-469B-9C1A-8225F5504ED8",
+                    "2D8D7EA3-0AE4-4127-987F-C7A69726BDBF",
+                    "D58A97C1-C6D0-410F-BB7B-36BFC47F1BB1"
+                ]
+            },
+            {
+                "id": "885BD7F8-D398-4DD3-AF6A-C062EDB0BAA3",
+                "name": "sar-arcane-oompas",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "AB296B73-8C37-4549-AD03-26D35541F37E",
+                    "413CC597-47A5-4624-B409-9E1FFC85D325",
+                    "9EB36867-9AAD-4A3B-B436-0476CDC10624"
+                ]
+            },
+            {
+                "id": "D9D45E69-7883-425B-AF4B-968B269BA444",
+                "name": "sar-miner-oompas",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "25B59AFC-3E85-4793-815D-1E2B2ECD0253",
+                    "5B27A600-09E5-4F28-ACB9-A839215CDBD3",
+                    "9DAF4306-CF30-469B-9C1A-8225F5504ED8",
+                    "2D8D7EA3-0AE4-4127-987F-C7A69726BDBF",
+                    "D58A97C1-C6D0-410F-BB7B-36BFC47F1BB1"
+                ]
+            },
+            {
+                "id": "B536CAD6-2850-42D7-B6FA-C009C3AE6A02",
+                "name": "sar-squirrels",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "CC46EA77-4326-4F41-BD5A-CD8510D208BF"
+                ]
+            },
+            {
+                "id": "EF5BD2D9-463E-4112-952A-A29917133B85",
+                "name": "sar-ticket-holder-access",
+                "doors": [
+                    "126A73D3-2148-4DA9-9332-867571884AA1",
+                    "094F5C91-0E13-4712-8382-1B4B829C4111",
+                    "EDFEAF67-E20B-40CD-B8AD-9F267B1AFBB3",
+                    "FD9FFD2F-B8F4-4670-ACE3-82A1D6E09441",
+                    "01BF3FCD-6626-41B9-B09E-1BAE0DCCA88A",
+                    "4D2B151E-C010-46A9-AAF3-E203E3779FC9",
+                    "AB296B73-8C37-4549-AD03-26D35541F37E",
+                    "25B59AFC-3E85-4793-815D-1E2B2ECD0253",
+                    "90B28026-FDBF-4F52-AFE8-A5774B10DADD",
+                    "ACBF07D7-83B7-4C2F-88E1-7B00AA44F780",
+                    "CC46EA77-4326-4F41-BD5A-CD8510D208BF",
+                    "B3831A80-1616-4E30-992F-8E738D549EF6"
+                ]
+            },
+            {
+                "id": "DC872B88-2D3C-4E1A-87E1-85D45D1503C9",
+                "name": "sar-declogging-oompas",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "EDFEAF67-E20B-40CD-B8AD-9F267B1AFBB3",
+                    "FD9FFD2F-B8F4-4670-ACE3-82A1D6E09441",
+                    "98ED4AAB-8D39-430A-82B6-E22CF8ED4E24",
+                    "01AF3DE8-FC26-4643-99CA-BD4F1D8FBA16"
+                ]
+            },
+            {
+                "id": "729C11A7-4B4B-489D-845A-11879DAAE500",
+                "name": "sar-worker-oompas",
+                "doors": [
+                    "EA0F4EAA-5666-4439-9E5D-6A4FFEB578DF",
+                    "01BF3FCD-6626-41B9-B09E-1BAE0DCCA88A",
+                    "7FCE32EE-EE2D-46AA-8285-317EBA5D5F9C",
+                    "78A2F6A7-A20B-4E99-BCB8-439C28D92825",
+                    "BF8F4D8D-26AC-4650-85E0-3CD672B93EEB",
+                    "25B59AFC-3E85-4793-815D-1E2B2ECD0253"
+                ]
+            }
+        ]

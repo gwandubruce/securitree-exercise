@@ -1,0 +1,135 @@
+[
+            {
+                "id": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C",
+                "name": "Wonka Factory",
+                "parent_area_id": null,
+                "child_area_ids": [
+                    "CBB8569D-C331-4629-A1F7-236BFA1A2822",
+                    "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713"
+                ]
+            },
+            {
+                "id": "CBB8569D-C331-4629-A1F7-236BFA1A2822",
+                "name": "Chocolate Room",
+                "parent_area": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C",
+                "child_area_ids": [
+                    "64F25F3B-0F65-45EE-92A7-2B53E58B5CDD",
+                    "A44424B0-3253-4EE7-9060-7C977F4840C8",
+                    "F29B9474-CABC-46E3-8B75-66281ABFBA92"
+                ]
+            },
+            {
+                "id": "F29B9474-CABC-46E3-8B75-66281ABFBA92",
+                "name": "Sugargrass Meadows",
+                "parent_area": "CBB8569D-C331-4629-A1F7-236BFA1A2822",
+                "child_area_ids": [
+                    "EB3741EF-929D-430C-B637-EA5425ABB0E7"
+                ]
+            },
+            {
+                "id": "EB3741EF-929D-430C-B637-EA5425ABB0E7",
+                "name": "Lawn Mower Shed",
+                "parent_area": "F29B9474-CABC-46E3-8B75-66281ABFBA92",
+                "child_area_ids": []
+            },
+            {
+                "id": "64F25F3B-0F65-45EE-92A7-2B53E58B5CDD",
+                "name": "Chocolate River",
+                "parent_area": "CBB8569D-C331-4629-A1F7-236BFA1A2822",
+                "child_area_ids": [
+                    "7EE29BBE-259C-402B-B870-7C32FC845674",
+                    "24D54F49-1D8C-417A-9B43-AC12F43DE294"
+                ]
+            },
+            {
+                "id": "7EE29BBE-259C-402B-B870-7C32FC845674",
+                "name": "Chocolate River Pipeline One",
+                "parent_area": "64F25F3B-0F65-45EE-92A7-2B53E58B5CDD",
+                "child_area_ids": []
+            },
+            {
+                "id": "24D54F49-1D8C-417A-9B43-AC12F43DE294",
+                "name": "Chocolate River Pipeline Twenty Three",
+                "parent_area": "64F25F3B-0F65-45EE-92A7-2B53E58B5CDD",
+                "child_area_ids": []
+            },
+            {
+                "id": "A44424B0-3253-4EE7-9060-7C977F4840C8",
+                "name": "Fear Tunnel",
+                "parent_area": "CBB8569D-C331-4629-A1F7-236BFA1A2822",
+                "child_area_ids": []
+            },
+            {
+                "id": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "name": "Research & Development",
+                "parent_area": "6C4E2C5D-BBBB-4386-AA71-B7F56727433C",
+                "child_area_ids": [
+                    "57569BE4-FF4A-4C56-A274-A24CBB7E4672",
+                    "F33941A1-7623-4192-80E0-7B1511C17883",
+                    "A31CDB07-17EE-4F50-B635-247BB9163EDF",
+                    "93179369-BD5D-42CE-A266-8F164D9C0700",
+                    "A7DF2E8E-71DD-4C32-AE92-EE33E2D4DF18",
+                    "BD506F8D-F4CD-4E19-ABCA-573808390FB6"
+                ]
+            },
+            {
+                "id": "57569BE4-FF4A-4C56-A274-A24CBB7E4672",
+                "name": "Lick-able Wallpaper Wall",
+                "parent_area": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "child_area_ids": []
+            },
+            {
+                "id": "F33941A1-7623-4192-80E0-7B1511C17883",
+                "name": "Fizzy-Lifting Drink Room",
+                "parent_area": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "child_area_ids": []
+            },
+            {
+                "id": "A31CDB07-17EE-4F50-B635-247BB9163EDF",
+                "name": "Juicing Room",
+                "parent_area": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "child_area_ids": []
+            },
+            {
+                "id": "93179369-BD5D-42CE-A266-8F164D9C0700",
+                "name": "Nut Room",
+                "parent_area": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "child_area_ids": [
+                    "51E7ABC4-7F01-42EF-A6F2-E8E3379FBB26"
+                ]
+            },
+            {
+                "id": "51E7ABC4-7F01-42EF-A6F2-E8E3379FBB26",
+                "name": "Garbage Chute",
+                "parent_area": "93179369-BD5D-42CE-A266-8F164D9C0700",
+                "child_area_ids": [
+                    "C9191B2C-08D1-48F0-8F19-FE4FA92A852A"
+                ]
+            },
+            {
+                "id": "C9191B2C-08D1-48F0-8F19-FE4FA92A852A",
+                "name": "Incinerator",
+                "parent_area": "51E7ABC4-7F01-42EF-A6F2-E8E3379FBB26",
+                "child_area_ids": []
+            },
+            {
+                "id": "A7DF2E8E-71DD-4C32-AE92-EE33E2D4DF18",
+                "name": "Wonkavision Studio",
+                "parent_area": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "child_area_ids": []
+            },
+            {
+                "id": "BD506F8D-F4CD-4E19-ABCA-573808390FB6",
+                "name": "Mount Fudge",
+                "parent_area": "B8501AFC-AD8F-4EBD-B733-87D9DA6AD713",
+                "child_area_ids": [
+                    "36BFBBB6-15ED-4222-9528-9830434A59FC"
+                ]
+            },
+            {
+                "id": "36BFBBB6-15ED-4222-9528-9830434A59FC",
+                "name": "Rock Candy Mine",
+                "parent_area": "BD506F8D-F4CD-4E19-ABCA-573808390FB6",
+                "child_area_ids": []
+            }
+        ]

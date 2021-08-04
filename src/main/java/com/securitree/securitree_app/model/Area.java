@@ -6,7 +6,6 @@
 package com.securitree.securitree_app.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CollectionTable;
 import javax.persistence.Column;
@@ -16,9 +15,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.Data;
 
@@ -34,21 +30,15 @@ import lombok.Data;
 public class Area implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int txnid;
+    @Column(name = "area_id")
     private String id;
     private String name;
-    private String parent_area_id;
+    private String parent_area;
     @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "child_list", joinColumns = @JoinColumn(name = "txnid"))
+    @CollectionTable(name = "ChildAreas")
     @Column(name = "child_area_ids")
     private List<String> child_area_ids;
-    @OneToMany
-    private List<Door> doors;
-    @ManyToOne
-    @JoinColumn(name = "FK_PARENT_AREA")
-    public Area parentArea;
-    @OneToMany(mappedBy = "parentArea", orphanRemoval = true)
-    public List<Area> childAreas = new ArrayList<Area>();
 
 }

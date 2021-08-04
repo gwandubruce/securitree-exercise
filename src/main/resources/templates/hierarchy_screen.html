@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org" >
+    <head >
+        <title> SSS</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+        <style>
+            ul, #myUL {
+                list-style-type: none;
+            }
+            #myUL {
+                margin: 0;
+                padding: 0;
+            }
+            .caret {
+                cursor: pointer;
+                -webkit-user-select: none; 
+                -moz-user-select: none; 
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .caret::before {
+                content: "\25B6";
+                color: blue;
+                display: inline-block;
+                margin-right: 6px;
+            }
+            .caret-down::before {
+                -ms-transform: rotate(90deg); 
+                -webkit-transform: rotate(90deg); 
+                transform: rotate(90deg);  
+            }
+            .nested {
+                display: none;
+            }
+            .active {
+                display: block;
+            }
+            li{
+                display: block;
+            }
+            .magenta{
+                color: darkmagenta;
+            }
+            .green{
+                color: darkgreen
+            }
+            .crimson{
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body style="background-color: azure;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">SecuriTree<svg xmlns="http://www.w3.org/2000/svg" style="color: greenyellow" width="20" height="20" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+                        <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
+                    </svg></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/}">Home
+                                <span class="visually-hidden"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/view}">View SecuriTree</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/manage}">Manage Doors</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex" method="POST" th:action="@{/logout}" style="alignment-adjust:middle ">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
+                </form>
+            </div>
+        </nav>
+        <h2 class="lead " align="center" style="margin-top: 2%" ><b  >...<svg xmlns="http://www.w3.org/2000/svg" style="color: greenyellow" width="40" height="40" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+                    <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
+                </svg>...</b></h2>
+        <p class="lead" align="center"> Click On The Arrow(s) To View Door Status and Entrance Rules For Areas and Their Sub-areas.</p>
+        <div style="align-items: center; border-style: solid;border-color: lightcoral;padding-top:2%;margin:1% 21% 55% 21%; " align="center" >
+            <ul id="myUL" >
+                <th:block th:each="area:${areas}">
+                    <li> <span class="caret" th:unless="${area.getChild_area_ids().isEmpty()==true}" th:text="${area.name}"> Parent Area</span>
+                        <ul class="nested">
+                            <th:block th:each="door:${doors.findByParentArea(area.id)}">
+                                <li> 
+                                    <em><button class="magenta" th:text="'DOOR '+${door.id} ">No Door Information</button ></em><span th:text="${door.name}"></span><em><span class="green" th:text="'-('+${door.status}+')'" ></span></em>
+                                </li>
+                                <li> <th:block th:each="rule:${rules.findByDoorId(door.id)}">
+                                        <em> <span  class="text-danger" th:text="'[Rule]'">No Rule Information</span></em><span th:text="'- '+${rule.name}+' '"></span>
+                                    </th:block>
+                                </li>
+                            </th:block>
+                            <th:block th:each="child:${area.getChild_area_ids()}">
+                                <li><span class="caret magenta" th:text="'[Child Area] '"> Child Area </span><span th:text="${areaRepo.findById(child).name}"></span>
+                                    <ul class="nested">
+                                        <th:block th:each="drChild:${doors.findByParentArea(areaRepo.findById(child).id)}">
+                                            <li>
+                                                <em><button class="magenta" th:text="'DOOR '+${drChild.id}">No Child Area Information</button></em> <em><span th:text="${drChild.name}"></span></em><em><span class="green" th:text="'( '+${drChild.status}+')'"></span></em>
+                                            </li>
+                                            <li> <th:block th:each="ruleChild:${rules.findByDoorId(drChild.id)}">
+                                                    <em> <span class="text-danger" th:text="'[Rule]'">No Access Rules Information</span></em><span th:text="'- '+${ruleChild.name}+' ,'"></span>
+                                                </th:block>
+                                            </li>
+                                        </th:block>
+                                    </ul>
+                                </li> 
+                            </th:block>
+                        </ul>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+            for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+            });
+            }
+        </script>
+    </body>
+</html>
