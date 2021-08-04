@@ -9,7 +9,6 @@ import com.securitree.securitree_app.model.AccessRule;
 import com.securitree.securitree_app.model.Area;
 import com.securitree.securitree_app.model.Door;
 import com.securitree.securitree_app.model.User;
-import com.securitree.securitree_app.repositories.DoorRepository;
 import com.securitree.securitree_app.services.WriteToDatabaseService;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,22 +21,17 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SecuritreeAppApplication {
 
-    private final DoorRepository doorRepository;
-
-    public SecuritreeAppApplication(DoorRepository doorRepository) {
-        this.doorRepository = doorRepository;
-    }
+    private static final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(SecuritreeAppApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(SecuritreeAppApplication.class, args);
-
     }
 
     @Bean
     CommandLineRunner runner(WriteToDatabaseService securiUserService) {
 
-//  Read both your registered users and system data json files and write to the database
         return args -> {
+            // Read data from JSON files and map it to Java Objects
             ObjectMapper mapper = new ObjectMapper();
             mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
             mapper.setVisibility(VisibilityChecker.Std.defaultInstance().withFieldVisibility(JsonAutoDetect.Visibility.ANY));
@@ -59,12 +53,14 @@ public class SecuritreeAppApplication {
                 List<AccessRule> rules = mapper.readValue(inputStreamAccessRules, accessReference);
                 List<Area> areas = mapper.readValue(inputStreamAreas, areaReference);
                 List<Door> Alldoors = mapper.readValue(inputStreamDoors, doorsReference);
+                //Write data to the database
                 securiUserService.writeUsers(users);
                 securiUserService.writeAreas(areas);
                 securiUserService.writeDoors(Alldoors);
                 securiUserService.writeRules(rules);
 
             } catch (IOException io) {
+                LOG.info("Failed to save data into the database...");
             }
 
         };

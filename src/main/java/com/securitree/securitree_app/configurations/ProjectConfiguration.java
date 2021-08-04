@@ -37,15 +37,15 @@ public class ProjectConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests().antMatchers("/", "/treeView", "/manageDoors")
-                .permitAll()
+        http.csrf().disable().authorizeRequests().antMatchers("/", "/view", "/manage","/lock","/unlock","/submit","/submit0")
+                .authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .permitAll();
-//                .and()
-//                .logout()
-//                .logoutSuccessUrl("/login");
+                .permitAll()
+                .and()
+                .logout()
+                .logoutSuccessUrl("/login");
     }
 
 }

@@ -16,8 +16,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface DoorRepository extends JpaRepository<Door, Integer> {
-    
+
     Door findById(String id);
+
     List<Door> findByParentArea(String parent_area);
-  
+
 }
